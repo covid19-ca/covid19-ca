@@ -8,7 +8,7 @@ Las capas geoespaciales de los países de Centro América se descargaron del sit
 [GADM](https://gadm.org/)
 
 Descompresión de las capas de nivel 0:
-```
+```terminal
 $ unzip gadm36_BLZ_shp.zip gadm36_BLZ_0.* 
 $ unzip gadm36_CRI_shp.zip gadm36_CRI_0.*
 $ unzip gadm36_GTM_shp.zip gadm36_GTM_0.*
