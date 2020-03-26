@@ -17,3 +17,13 @@ $ unzip gadm36_NIC_shp.zip gadm36_NIC_0.*
 $ unzip gadm36_PAN_shp.zip gadm36_PAN_0.*
 $ unzip gadm36_SLV_shp.zip gadm36_SLV_0.*
 ```
+
+```terminal
+ogr2ogr -f "GeoJSON" paises gadm36_BLZ_0.shp
+ogr2ogr -f "GeoJSON" -append -update paises gadm36_CRI_0.shp
+ogr2ogr -f "GeoJSON" -append -update paises gadm36_GTM_0.shp
+ogr2ogr -f "GeoJSON" -append -update paises gadm36_HND_0.shp
+ogr2ogr -f "GeoJSON" -append -update paises gadm36_NIC_0.shp
+ogr2ogr -f "GeoJSON" -append -update paises gadm36_PAN_0.shp
+ogr2ogr -f "GeoJSON" -append -update paises gadm36_SLV_0.shp
+```
