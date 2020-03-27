@@ -7,7 +7,7 @@
 Las capas geoespaciales de los países de Centro América se descargaron del sitio:  
 [GADM](https://gadm.org/)
 
-Descompresión de las capas de nivel 0:
+**Descompresión de las capas de nivel 0**:
 ```terminal
 $ unzip gadm36_BLZ_shp.zip gadm36_BLZ_0.* 
 $ unzip gadm36_CRI_shp.zip gadm36_CRI_0.*
@@ -18,7 +18,7 @@ $ unzip gadm36_PAN_shp.zip gadm36_PAN_0.*
 $ unzip gadm36_SLV_shp.zip gadm36_SLV_0.*
 ```
 
-Unión de los países en una sola capa (shapefile):
+**Unión de los países en una sola capa (shapefile)**:
 ```terminal
 $ ogr2ogr -f "ESRI Shapefile" capa_paises.shp gadm36_BLZ_0.shp
 $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_CRI_0.shp
@@ -29,7 +29,7 @@ $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_PAN_0.shp
 $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_SLV_0.shp
 ```
 
-Conversión a GeoJSON:
+**Conversión a GeoJSON**:
 ```terminal
 $ ogr2ogr -f "GeoJSON" capa_paises.geojson capa_paises.shp
 ```
