@@ -18,7 +18,7 @@ $ unzip gadm36_PAN_shp.zip gadm36_PAN_0.*
 $ unzip gadm36_SLV_shp.zip gadm36_SLV_0.*
 ```
 
-Unión de los países en una sola capa:
+Unión de los países en una sola capa (shapefile):
 ```terminal
 $ ogr2ogr -f "ESRI Shapefile" capa_paises.shp gadm36_BLZ_0.shp
 $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_CRI_0.shp
@@ -27,4 +27,9 @@ $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_HND_0.shp
 $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_NIC_0.shp
 $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_PAN_0.shp
 $ ogr2ogr -f "ESRI Shapefile" -append -update capa_paises.shp gadm36_SLV_0.shp
+```
+
+Conversión a GeoJSON:
+```terminal
+$ ogr2ogr -f "GeoJSON" capa_paises.geojson capa_paises.shp
 ```
